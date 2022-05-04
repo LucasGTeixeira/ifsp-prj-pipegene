@@ -42,17 +42,20 @@ em objetos, podendo ser manipuladas e acompanhadas durante o processo de execuç
 ## Serviços/Providers da Aplicação (Aplicações Python)
 
 ### Grafico de pré-processamento
+
 Com PROVIDER_ID="78cec5db-6396-4fd9-803f-1fd469d76312", ele representa
 a app python "app_grafico_pre_processamento.py" que roda na porta 5011. Já existe um projeto chamado
 "Explorando pré processamentos MAF" (f2d6a949-8bb5-4df5-8ca7-e5b8d2292488) o qual possui um dataset e uma pipeline configurada
 para chamar esse serviço. Ele é o mais simples, recebe um maf e devolve um png.
 
-###Pré-processamento - Rodrigo
+### Pré-processamento - Rodrigo
+
 Com PROVIDER_ID="e8bf42e4-2ffc-4935-a546-ee5d9263f419", ele representa
 a app python "app_pre_processamento_output_maf.py" que roda na porta 5001. A ideia dele é receber um maf de input
 e como output devolver um maf, que sera utilizado como input para outro serviço.
 
-###Classificação de variante - Rodrigo
+### Classificação de variante - Rodrigo
+
 Com PROVIDER_ID="49df4595-b8af-4e32-8791-65e583ae08a2", ele
 representa a app python "app_classificacao_variant.py" que roda na porta 5002. A ideia dele é receber um maf de input
 resultante de um pre processamento e devolver um png com a classificação da variant.
