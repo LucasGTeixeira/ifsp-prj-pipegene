@@ -22,9 +22,9 @@ O banco já está está sendo populado com alguns dados para facilitar os testes
 ## Subindo o Front End
 
 A parte do Front End foi construída em Angular e sua instalação e configuração
-é detalhada em [Pipegene Front End](httAps://github.com/LucasGTeixeira/pipegene-frontend)
+é detalhada em [PipegeneFrontEnd](httAps://github.com/LucasGTeixeira/pipegene-frontend)
 
-##Subindo os Serviços em Python
+## Subindo os Serviços em Python
 
 Para subir o serviços em python siga as instruções no outro readme do repostitório
 [PythonScripts](https://github.com/viniciuslsilva/PipeGeneScripts).
