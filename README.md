@@ -34,7 +34,7 @@ Para subir o serviços em python siga as instruções no outro readme do reposti
 - `configuration:` Define as configurações de execução e segurança usando JSON Web Token como encriptador e autenticação dos tokens criados
 - `domain:` Encapsula as classes de domínio do sistema que serão implemetnadas durante a execução da aplicação.
 - `external:` Define as Entities e Objetos de acesso a dados que farão conexão com o banco, assim como o envio e recebimento de status dos serviços 
-- `usecases: ` Diretório contendo os casos de uso da aplicação, contendo os CRUDs e subdiretórios `gateway`, os quais contém intefaces de Acesso a Dados
+- `usecases:` Diretório contendo os casos de uso da aplicação, contendo os CRUDs e subdiretórios `gateway`, os quais contém intefaces de Acesso a Dados
 - `web:` Define as classes de controladores Rest mapeadas para requisições HTTP no subdiretório `controller`, assim como o tratamento de exceções
 dessas requisições no subdiretório `exception`. Para fins de controle, foi criado um subdiretório web chamado `model`, onde as requisições são estuturadas 
 em objetos, podendo ser manipuladas e acompanhadas durante o processo de execução das pipelines
