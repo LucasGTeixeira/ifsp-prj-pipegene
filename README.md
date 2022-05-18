@@ -29,18 +29,32 @@ A parte do Front End foi construída em Angular e sua instalação e configuraç
 Para subir o serviços em python siga as instruções no outro readme do repostitório
 [PythonScripts](https://github.com/viniciuslsilva/PipeGeneScripts).
 
+# Entidades do sistema
+- `Account`: É o usuário do sistema que utiliza dos serviços de execução, pipelines e projetos pararealizar suas pesquisas
+- `Projeto`: Corresponde a um cadastro de Dataset que será inportado na plataforma para uma futura execução
+- `Pipeline`: É o conjunto de um ou mais serviços sendo aplicados em um Projeto
+- `Provider`: Serviços de Data Science que são usados pela aplicação para gerar dados através de um dataset
+- `Execução`: Determina o processo a pipeline que será executada tendo como base um Dataset específico
+  em objetos, podendo ser manipuladas e acompanhadas durante o processo de execução das pipelines
+
 # Pacotes do Projeto
+- `configuration`: Define as configurações de execução e segurança usando JSON Web Token como encriptador e autenticação dos tokens criados
+- `domain`: Encapsula as classes de domínio do sistema que serão implemetnadas durante a execução da aplicação.
+- `external`: Define as Entities e Objetos de acesso a dados que farão conexão com o banco, assim como o envio e recebimento de status dos serviços 
+- `usecases`: Diretório contendo os casos de uso da aplicação, contendo os CRUDs e subdiretórios `gateway`, os quais contém intefaces de Acesso a Dados
+- `web`: Define as classes de controladores Rest mapeadas para requisições HTTP no subdiretório `controller`, assim como o tratamento de exceções
+  dessas requisições no subdiretório `exception`. Para fins de controle, foi criado um subdiretório web chamado `model`, onde as requisições são estuturadas 
 
-- `configuration:` Define as configurações de execução e segurança usando JSON Web Token como encriptador e autenticação dos tokens criados
-- `domain:` Encapsula as classes de domínio do sistema que serão implemetnadas durante a execução da aplicação.
-- `external:` Define as Entities e Objetos de acesso a dados que farão conexão com o banco, assim como o envio e recebimento de status dos serviços 
-- `usecases:` Diretório contendo os casos de uso da aplicação, contendo os CRUDs e subdiretórios `gateway`, os quais contém intefaces de Acesso a Dados
-- `web:` Define as classes de controladores Rest mapeadas para requisições HTTP no subdiretório `controller`, assim como o tratamento de exceções
-dessas requisições no subdiretório `exception`. Para fins de controle, foi criado um subdiretório web chamado `model`, onde as requisições são estuturadas 
-em objetos, podendo ser manipuladas e acompanhadas durante o processo de execução das pipelines
 
-## Serviços/Providers da Aplicação (Aplicações Python)
+# Casos de uso
+- `account`: Define os usecases na criação e login de usuarios na plataforma passando por uma verificação de dados baseado em um modelo de usuario da apliação
+- `pipeline`: Responsável pela criação e consulta de pipelines durante a aplicação
+- `project`: Implementa a criação, edição, remoção e consulta de projetos na aplicação
+- `provider`: Criação e consulta de serviços de Data Science na plataforma
+- `executuon`: Encapsula os dados da criação de uma execução e os envia para que sejam processados por um provider
 
+
+## Providers da Aplicação (Aplicações Python)
 ### Grafico de pré-processamento
 
 Com PROVIDER_ID="78cec5db-6396-4fd9-803f-1fd469d76312", ele representa
